@@ -7,7 +7,7 @@ namespace ParallelProgramming.NET
     {
         static void Main(string[] args)
         {
-            _2_CancellingTask.Drive();
+            _4_WaitingTask.Drive();
         }
     }
 }
