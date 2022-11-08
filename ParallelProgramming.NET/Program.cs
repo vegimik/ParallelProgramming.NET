@@ -1,5 +1,7 @@
 ﻿using ParallelProgramming.NET._1._TaskProgramming;
+using ParallelProgramming.NET._2._DataSharingAndSynchronization;
 using System;
+using System.Threading;
 
 namespace ParallelProgramming.NET
 {
@@ -7,7 +9,9 @@ namespace ParallelProgramming.NET
     {
         static void Main(string[] args)
         {
-            _4_WaitingTask.Drive();
+            _4_Mutex.Drive();
+
+
         }
     }
 }
