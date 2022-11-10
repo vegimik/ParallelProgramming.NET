@@ -1,6 +1,7 @@
 ﻿using ParallelProgramming.NET._1._TaskProgramming;
 using ParallelProgramming.NET._2._DataSharingAndSynchronization;
 using ParallelProgramming.NET._3._ConcurrentCollections;
+using ParallelProgramming.NET._4._TaskCoordination;
 using System;
 using System.Threading;
 
@@ -10,7 +11,7 @@ namespace ParallelProgramming.NET
     {
         static void Main(string[] args)
         {
-            _4_BlockingCollectionAndproducerCustomerPattern.Drive();
+            _3_Barrier.Drive();
 
 
         }
