@@ -11,7 +11,7 @@ namespace ParallelProgramming.NET
     {
         static void Main(string[] args)
         {
-            _3_Barrier.Drive();
+            _6_SemaphoreSlim.Drive();
 
 
         }

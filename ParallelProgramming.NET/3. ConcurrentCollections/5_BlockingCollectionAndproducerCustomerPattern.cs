@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ParallelProgramming.NET._3._ConcurrentCollections
 {
-    internal class _4_BlockingCollectionAndproducerCustomerPattern
+    internal class _5_BlockingCollectionAndproducerCustomerPattern
     {
         static BlockingCollection<int> messages = new BlockingCollection<int>(
           new ConcurrentBag<int>(), 10 /* bounded */

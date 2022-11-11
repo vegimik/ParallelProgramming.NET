@@ -12,31 +12,26 @@ namespace ParallelProgramming.NET._3._ConcurrentCollections
 
         public static void Drive()
         {
-            var bag = new ConcurrentBag<int>();
-            var tasks = new List<Task>();
+            var stack = new ConcurrentStack<int>();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.Push(4);
 
-            for (int i = 0; i < 10; i++)
+            int result;
+            if (stack.TryPeek(out result))
+                Console.WriteLine($"{result} is on top");
+
+            if (stack.TryPop(out result))
+                Console.WriteLine($"Popped {result}");
+
+            var items = new int[5];
+            if (stack.TryPopRange(items, 0, 5) > 0) // actually pops only 3 items
             {
-                int i1 = i;
-                tasks.Add(Task.Factory.StartNew(() =>
-                {
-                    bag.Add(i1);
-                    Console.WriteLine($"{Task.CurrentId} has added {i1}");
-                    int result;
-                    if (bag.TryPeek(out result))
-                    {
-                        Console.WriteLine($"{Task.CurrentId} has peeked the value {result}");
-                    }
-                }));
+                var text = string.Join(", ", items.Select(i => i.ToString()));
+                Console.WriteLine($"Popped these items: {text}");
             }
 
-            Task.WaitAll(tasks.ToArray());
-
-            int last;
-            if (bag.TryTake(out last))
-            {
-                Console.WriteLine($"I go {last}");
-            }
         }
-    }
+     }
 }
