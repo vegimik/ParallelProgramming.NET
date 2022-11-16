@@ -13,7 +13,7 @@ namespace ParallelProgramming.NET
     {
         static void Main(string[] args)
         {
-            _3_MergeOptions.Drive();
+            _4_CustomAggregation.Drive();
 
 
         }
